@@ -176,7 +176,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/meownote.github.io/2020/02/24/test-LateX/" class="post-title-link" itemprop="url">test LateX</a>
+            <a href="/meownote.github.io/2020/02/24/test-LateX/" class="post-title-link" itemprop="url">開始使用hexo以及網頁上LateX語法測試</a>
         </h1>
 
         <div class="post-meta">
@@ -187,7 +187,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-02-24 16:28:29 / Modified: 16:41:28" itemprop="dateCreated datePublished" datetime="2020-02-24T16:28:29+08:00">2020-02-24</time>
+              <time title="Created: 2020-02-24 16:28:29 / Modified: 17:21:31" itemprop="dateCreated datePublished" datetime="2020-02-24T16:28:29+08:00">2020-02-24</time>
             </span>
 
           <br>
@@ -196,14 +196,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>186</span>
+              <span>861</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -215,17 +215,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><span class="math display">\[\begin{equation}\label{eq1}
+          <p>今天嘗試用hexo這個框架來架設自己的技術部落格， 從Medium跑來自架hexo的原因主要是雖然Medium的排版很乾淨很舒服，但是她的寫作環境有以下缺點：<br />
+1. 不支援程式碼高亮<br />
+2. 不支援TeX的數學公式渲染</p>
+<p>在網路上找到一些有關hexo能夠使用TeX語法的文章，於是我也來嘗試看看： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;equation&#125;\label&#123;eq1&#125;</span><br><span class="line">Ｅ＝mc^2</span><br><span class="line">\end&#123;equation&#125;$$</span><br></pre></td></tr></table></figure> 在安裝了mathjax與hexo-renderer-pandoc渲染器之後，上面的LaTeX碼顯示如下： <span class="math display">\[\begin{equation}\label{eq1}
 Ｅ＝mc^2
 \end{equation}\]</span></p>
-<p>質能守恆 <span class="math inline">\(\eqref{eq1}\)</span> 由愛因斯坦提出</p>
-<p><span class="math display">\[\begin{equation}\label{eq2}
+<p>ＭathJax和一般LaTeX語法差別在於一定要用<code>\begin{equation}\label{eq1}</code>把公式包起來並給予編號，例子如下： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">質能守恆 $\eqref&#123;eq1&#125;$ 由愛因斯坦提出。</span><br></pre></td></tr></table></figure> 質能守恆 <span class="math inline">\(\eqref{eq1}\)</span> 由愛因斯坦提出。</p>
+<p>至於多行公式則依樣沒啥太大的差別： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;equation&#125;\label&#123;eq2&#125;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">a &amp;&#x3D; b + c \\</span><br><span class="line">  &amp;&#x3D; d + e + f + g \\</span><br><span class="line">  &amp;&#x3D; h + i</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\end&#123;equation&#125;$$</span><br></pre></td></tr></table></figure> <span class="math display">\[\begin{equation}\label{eq2}
 \begin{aligned}
 a &amp;= b + c \\
   &amp;= d + e + f + g \\
   &amp;= h + i
 \end{aligned}
 \end{equation}\]</span></p>
+<p>Hexo的方便之處在於她能夠以markdown來寫文章，且也能將文章輸出，不怕轉移平台/備份時的不便。<br />
+舉例如下：</p>
+<h1 id="等級一標題">等級一標題</h1>
+<h2 id="等級二標題">等級二標題</h2>
+<h3 id="等級三標題">等級三標題</h3>
+<h4 id="等級四標題">等級四標題</h4>
+<h5 id="等級五標題">等級五標題</h5>
+<h6 id="等級六標題">等級六標題</h6>
+<ul>
+<li>aaa</li>
+<li>bbb</li>
+<li>ccc</li>
+</ul>
 
       
     </div>
@@ -447,7 +463,7 @@ a &amp;= b + c \\
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">1 mins.</span>
+    <span title="Reading time total">2 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
